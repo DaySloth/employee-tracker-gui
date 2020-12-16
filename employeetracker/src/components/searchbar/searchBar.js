@@ -1,7 +1,13 @@
 import React from 'react';
 
 function SearchBar (props) {
-    return <input type="text" onChange={props.handleInputChange}></input>
+    return (
+        <div>
+            <label>Filter by name: </label>
+            <input type="text" name="search" onChange={props.handleInputChange}></input>
+        </div>
+    )
+    
 };
 
 export default SearchBar;
