@@ -1,8 +1,9 @@
 import React from 'react';
+import './sortBtn.css';
 
 function SortBtn (props) {
     return(
-        <div>
+        <div className="float-right">
             <label>Sort by DOB:</label>
             <select onChange={props.handleSortChange} name="sort">
                 <option></option>
