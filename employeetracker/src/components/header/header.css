@@ -1,0 +1,8 @@
+header {
+    width: 100%;
+    text-align: center;
+    background-color: #cccc;
+    padding: 30px;
+    border: 10px black solid;
+    margin-bottom: 20px;
+}
