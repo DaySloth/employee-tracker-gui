@@ -4,6 +4,8 @@ import SortBtn from '../sortbutton/sortBtn.js';
 import Table from '../table/table.js';
 import API from '../../utils/API.js';
 
+import './container.css';
+
 class Container extends Component {
     state = {
         search: "",
@@ -85,8 +87,11 @@ class Container extends Component {
     render() {
         return (
             <div className="container">
-                <SearchBar handleInputChange={this.handleInputChange} />
-                <SortBtn handleSortChange={this.handleSortChange} />
+                <div className="clearfix">
+                    <SearchBar handleInputChange={this.handleInputChange} />
+                    <SortBtn handleSortChange={this.handleSortChange} />
+                </div>
+
                 <Table search={this.state.search} employees={this.state.filteredEmployees} />
             </div>
         )
