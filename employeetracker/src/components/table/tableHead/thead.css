@@ -1,3 +1,11 @@
 th{
     width: 150px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    font-style: italic;
+}
+
+thead {
+    text-align: center;
+    border-bottom: 1px solid black;
 }
