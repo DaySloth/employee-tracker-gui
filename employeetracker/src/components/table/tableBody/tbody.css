@@ -1,7 +1,10 @@
 img {
     border-radius: 50%;
+    width: 75px;
 }
 
-tr {
-    padding-top: 20px;
+td {
+    border-right: 1px black solid;
+    padding: 10px;
+    text-align: center;
 }
