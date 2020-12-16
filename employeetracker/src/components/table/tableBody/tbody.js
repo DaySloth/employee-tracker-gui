@@ -11,7 +11,7 @@ function TableBody(props) {
                         <td>{employee.first_name} {employee.last_name}</td>
                         <td><a href={`mailto:${employee.email}`}>{employee.email}</a></td>
                         <td><a href={`tel:${employee.phone}`}>{employee.phone}</a></td>
-                        <td>{employee.dob.toDateString()}</td>
+                        <td>{employee.dob.toDateString().split(' ').slice(1).join(' ')}</td>
                     </tr>
                 )
             })}
