@@ -4,7 +4,7 @@ import './header.css';
 function Header() {
     return (
         <header>
-            <h1>Header Element</h1>
+            <h1 className="animate__animated animate__fadeInDown">Header Element</h1>
         </header>
     )
 };
