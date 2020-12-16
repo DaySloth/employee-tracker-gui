@@ -1,6 +1,7 @@
 import React from 'react';
 import TableHead from './tableHead/thead.js';
 import TableBody from './tableBody/tbody.js';
+import './table.css';
 
 function Table(props) {
     return (
