@@ -7,7 +7,7 @@ function Table(props) {
     return (
         <div>
             <table>
-                <TableHead />
+                <TableHead sort={props.sort} handleSortChange={props.handleSortChange}/>
                 <TableBody employees={props.employees} />
             </table>
         </div>
