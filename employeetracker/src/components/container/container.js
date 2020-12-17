@@ -51,10 +51,19 @@ class Container extends Component {
 
     handleSortChange = event => {
         event.preventDefault();
-        const { name, value } = event.target;
-        this.setState({
-            [name]: value
-        }, this.sortEmployeesByDOB);
+        if(this.state.sort === ""){
+            this.setState({
+                sort: "ascending"
+            }, this.sortEmployeesByDOB)
+        } else if (this.state.sort === "ascending") {
+            this.setState({
+                sort: "descending"
+            }, this.sortEmployeesByDOB)
+        } else if (this.state.sort === "descending") {
+            this.setState({
+                sort: ""
+            }, this.sortEmployeesByDOB)
+        }
     }
 
     filterEmployees = () => {
@@ -70,11 +79,11 @@ class Container extends Component {
     };
 
     sortEmployeesByDOB = () => {
-        if (this.state.sort === "Ascending") {
+        if (this.state.sort === "ascending") {
             this.setState({
                 filteredEmployees: this.state.filteredEmployees.sort(function (a, b) { return a.dob - b.dob })
             });
-        } else if (this.state.sort === "Decending") {
+        } else if (this.state.sort === "descending") {
             this.setState({
                 filteredEmployees: this.state.filteredEmployees.sort(function (a, b) { return b.dob - a.dob })
             });
@@ -89,10 +98,9 @@ class Container extends Component {
             <div className="container">
                 <div className="clearfix">
                     <SearchBar handleInputChange={this.handleInputChange} />
-                    <SortBtn handleSortChange={this.handleSortChange} />
                 </div>
 
-                <Table search={this.state.search} employees={this.state.filteredEmployees} />
+                <Table search={this.state.search} employees={this.state.filteredEmployees} sort={this.state.sort} handleSortChange={this.handleSortChange}/>
             </div>
         )
     };
