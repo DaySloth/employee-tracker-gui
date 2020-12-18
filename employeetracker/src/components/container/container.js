@@ -1,6 +1,5 @@
 import { React, Component } from 'react';
 import SearchBar from '../searchbar/searchBar.js';
-import SortBtn from '../sortbutton/sortBtn.js';
 import Table from '../table/table.js';
 import API from '../../utils/API.js';
 
