@@ -4,7 +4,7 @@ img {
 }
 
 td {
-    border-right: 1px black solid;
+    border-right: 1px #BDEDE0 solid;
     padding: 10px;
     text-align: center;
 }
