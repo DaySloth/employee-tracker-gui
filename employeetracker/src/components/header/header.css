@@ -5,6 +5,6 @@ header {
     padding: 30px;
     border: 10px #BDEDE0 solid;
     margin-bottom: 20px;
-    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
