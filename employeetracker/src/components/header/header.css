@@ -1,8 +1,10 @@
 header {
     width: 100%;
     text-align: center;
-    background-color: #cccc;
+    background-color: #444554;
     padding: 30px;
-    border: 10px black solid;
+    border: 10px #BDEDE0 solid;
     margin-bottom: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
