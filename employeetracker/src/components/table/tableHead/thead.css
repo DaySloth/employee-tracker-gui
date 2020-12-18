@@ -1,15 +1,19 @@
 th{
     width: 150px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-top: 1px solid #BDEDE0;
+    border-right: 1px solid #BDEDE0;
     font-style: italic;
 }
 
 thead {
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #BDEDE0;
 }
 
 .cursorHover{
     cursor: pointer;
+}
+
+.fa-caret-up, .fa-caret-down {
+    color: #B24C63;
 }
