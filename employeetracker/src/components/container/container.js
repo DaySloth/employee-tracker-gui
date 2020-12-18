@@ -14,15 +14,19 @@ class Container extends Component {
         filteredEmployees: []
     };
 
+    //calls API to get users
     componentDidMount() {
         this.getUsers()
     };
 
+    //getting users from API
     getUsers() {
         API.getUsers()
             .then(res => {
                 const resultArray = [];
+                //pulls out the elements we want for our page
                 res.data.results.forEach(element => {
+                    //sets up a date to be used later on
                     let d = new Date(element.dob.date)
 
                     resultArray.push({
@@ -35,6 +39,7 @@ class Container extends Component {
                         dob: d
                     });
                 });
+                //sets the employee array and filtered employees array
                 this.setState({ employees: resultArray, filteredEmployees: resultArray });
             })
             .catch(err => {
@@ -42,6 +47,7 @@ class Container extends Component {
             });
     };
 
+    //handles the search input change and sets the search state
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
@@ -49,6 +55,7 @@ class Container extends Component {
         }, this.filterEmployees);
     };
 
+    //handles the dob search change
     handleSortChange = event => {
         event.preventDefault();
         if(this.state.sort === ""){
@@ -66,6 +73,7 @@ class Container extends Component {
         }
     }
 
+    //filters the employees displayed to reflect a name that includes the search
     filterEmployees = () => {
         if (this.state.search !== " ") {
             this.setState({
@@ -78,6 +86,7 @@ class Container extends Component {
         }
     };
 
+    //sorts employees by ascending or descending order
     sortEmployeesByDOB = () => {
         if (this.state.sort === "ascending") {
             this.setState({
