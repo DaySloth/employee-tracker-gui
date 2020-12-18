@@ -6,6 +6,7 @@ import API from '../../utils/API.js';
 import './container.css';
 
 class Container extends Component {
+    //setting the state for the react app
     state = {
         search: "",
         sort: "",
